@@ -8,6 +8,13 @@ app.use("/", (req, res) => {
   });
 });
 
+app.use("/hello", (req, res) => {
+  res.status(200).json({
+    status: res.statusCode,
+    message: "Hello, this is my nodejs app on vercel",
+  });
+});
+
 app.listen(8000, () => {
   console.log(`App started on port 8000`);
 });
