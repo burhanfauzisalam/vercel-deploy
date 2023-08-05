@@ -1,14 +1,14 @@
 const express = require("express");
 
 const app = express();
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({
     status: res.statusCode,
     message: "Deployment nodejs app to vercel",
   });
 });
 
-app.use("/hello", (req, res) => {
+app.get("/hello", (req, res) => {
   res.status(200).json({
     status: res.statusCode,
     message: "Hello, this is my nodejs app on vercel",
